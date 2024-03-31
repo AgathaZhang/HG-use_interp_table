@@ -7,6 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                // "E:\\Project_C\\json_lib\\**",
                 "${file}",       // 打开这个编译当前文件
                 // "${fileDirname}\\*.cpp",        // 打开这个编译本文件夹文件       
                 "-o",

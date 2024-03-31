@@ -4,6 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
+                // "E:/Project_C/json_lib/json/include",
+                // "E:/Project_C/json_lib/json/include/nlohmann"
             ],
             "defines": [
                 "_DEBUG",
