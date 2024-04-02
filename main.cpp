@@ -95,7 +95,6 @@ DataPoint find_grid_ID(double x, double y, const std::vector<DataPoint> &dataPoi
     return nearestGridPoint;
 }
 
-
 std::vector<double> interp_1(DataPoint p1, DataPoint p2, double x, double y)
 {   std::vector<double> weigh_p1(2), weigh_p2(2), weigh_ans(4);         // weigh 向量的前两位分别表示weigh_x 和 weigh_y ，后两位表示x, y点在x = x的直线正交 到 与p1 p2 连线的交点坐标
     weigh_p1[0] = p1.weight_x;
