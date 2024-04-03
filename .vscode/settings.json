@@ -64,7 +64,10 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "stdlib.h": "c",
+        "float.h": "c"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "cmake.sourceDirectory": "E:/Project_C/UWB_USE_INTERP_TABLE_240328/json_lib/json/tests/abi"
 }

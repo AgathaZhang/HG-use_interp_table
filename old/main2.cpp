@@ -324,10 +324,10 @@ int main()
 {   
 
     // double x = 1.13, y = 0.91;
-    // double x = 0.56, y = 1.65;
+    double x = 0.56, y = 1.65;
     // double x = 0.96, y = 1.19;
     // double x = 0.15, y = 2.03;
-    double x = 1.30, y = 2.19;
+    // double x = 1.30, y = 2.19;
     
 
     extern std::vector<DataPoint> dataPoints;
