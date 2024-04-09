@@ -54,17 +54,15 @@ int surround_by(double x, double y, DataPoint this_point, const DataPoint* dataP
     return count; // 返回找到的点的数量
 }
 
-void* my_open_file(const char* filename, const char* mode) {
-return fopen(filename, mode);}
-
+// void* my_open_file(const char* filename, const char* mode) {
+// return fopen(filename, mode);}
+//     // const char* fname = filename;
+//     // void* file = my_open_file(fname, "r");
 
 
 // 动态分配数组来存储读取的数据点
 DataPoint* read_table(const char* filename, int* count) {
-    // FILE* file = fopen(filename, "r");
-
-    const char* fname = filename;
-    void* file = my_open_file(fname, "r");
+    FILE* file = fopen(filename, "r");
 
 
     char line[MAX_LINE_LENGTH];
@@ -227,11 +225,24 @@ int main() {
     double x = 0.94, y = 2.11;
     // double x = 1.38, y = 1.68;
     int count;      // 计数data处理到第几个
-    DataPoint* data_vector = read_table("output.txt", &count);
+    DataPoint* data_vector = read_table("cali_table.c", &count);
     if (data_vector == NULL) {
         printf("Failed to read data points.\n");
         return 1; // 错误退出
     }
+
+    // //TODO 写入一个.C文件
+    // FILE *file = fopen("calibration_table.c", "w");
+    // for (int i = 0; i < count; i++) {
+    //     fprintf(file, "%s", data_vector[i]);
+    // }
+
+    // // 关闭文件
+    // fclose(file);
+
+
+
+
 
     double weigh_out[2]; // 用于存储 Interp_coords 函数的输出
     Interp_coords(data_vector, count, x, y, weigh_out);
